@@ -1,0 +1,28 @@
+<div class="gamestage">
+  <div class="stage">
+    <div *ngFor="let cols of stageArray" class="col">
+      <div *ngFor="let row of cols" class="row" [ngClass]="{'on': row / 1 === 1 || row / 1 === 2}"></div>
+    </div>
+  </div>
+  <div class="time">
+    <p>计时：<span>{{ft}}</span></p>
+  </div>
+  <div class="score">
+    <p>得分：<span>{{gameScore}}</span></p>
+  </div>
+  <div class="buttons">
+    <button class="left" (click)="left()">←</button>
+    <button class="up" (click)="rotate()">↑</button>
+    <button class="right" (click)="right()">→</button>
+    <button class="down" (click)="down()">↓</button>
+    <button class="pause" (click)="pause()" [hidden]="isPause">暂停</button>
+    <button class="pause" (click)="pause()" [hidden]="!isPause">继续</button>
+    <button class="restart" (click)="restart()">重新开始</button>
+  </div>
+  <div class="tips">
+    <p>←左移</p>
+    <p>↑变换</p>
+    <p>→右移</p>
+    <p>↓下移</p>
+  </div>
+</div>
