@@ -84,3 +84,12 @@
     border-radius: 4px;
     white-space: nowrap;
 }
+.tips {
+    position: absolute;
+    left: 230px;
+    top: 340px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    color: red;
+}
